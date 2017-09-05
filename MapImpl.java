@@ -3,18 +3,19 @@
 public class MapImpl implements Map {
 
     public void MapImpl(){
-
+    return;
     }
+
     //Add the MapListener ml to this map.
     //Note: A map can have multiple listeners
     public void addListener(MapListener ml){
-
+    return;
     }
 
 
     //Delete the MapListener ml from this map.
     public void deleteListener(MapListener ml){
-
+    return;
     }
 
 
@@ -27,27 +28,27 @@ public class MapImpl implements Map {
     //followed by optional letters, digits, or underscore characters
     public Place newPlace(String placeName, int xPos, int yPos) {
             throws IllegalArgumentException;
-
+            return null;
     }
 
 
     //Remove a place from the map
     //If the place does not exist, returns without error
     public void deletePlace(Place s){
-
+    return;
     }
 
 
     //Find and return the Place with the given name
     //If no place exists with given name, return NULL
     public Place findPlace(String placeName){
-
+    return null;
     }
 
 
     //Return a set containing all the places in this map
     public Set<Place> getPlaces(){
-
+    return null;
     }
 
 
@@ -61,20 +62,20 @@ public class MapImpl implements Map {
     //with a letter and is followed by optional letters and digits
     public Road newRoad(Place from, Place to, String roadName, int length){
             throws IllegalArgumentException;
-
+    return null;
     }
 
 
     //Remove a road r from the map
     //If the road does not exist, returns without error
     public void deleteRoad(Road r){
-
+    return;
     }
 
 
     //Return a set containing all the roads in this map
     public Set<Road> getRoads(){
-
+    return null;
     }
 
 
@@ -84,11 +85,14 @@ public class MapImpl implements Map {
     public void setStartPlace(Place p){
             throws IllegalArgumentException;
 
+            return;
+
     }
 
 
     //Return the starting place of this map
     public Place getStartPlace(){
+    return null;
 
     }
 
@@ -98,12 +102,13 @@ public class MapImpl implements Map {
     //Throws IllegalArgumentException if the place p is not in the map
     public void setEndPlace(Place p){
             throws IllegalArgumentException;
-
+    return;
     }
 
 
     //Return the ending place of this map
     public Place getEndPlace(){
+    return null;
 
     }
 
@@ -115,7 +120,7 @@ public class MapImpl implements Map {
     //Returns the total distance of the trip.
     //Returns -1, if there is no route from start to end
     public int getTripDistance(){
-
+    return 0;
     }
 
 
@@ -130,7 +135,7 @@ public class MapImpl implements Map {
     //if an ending place has been defined, a line containing
     //  END followed the name of the ending-place (terminated by \n)
     public String toString(){
-
+    return null;
     }
 
 }
