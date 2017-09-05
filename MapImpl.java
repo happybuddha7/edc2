@@ -2,7 +2,7 @@
 
 public class MapImpl implements Map {
 
-    public void MapImpl(){
+    public MapImpl(){
     return;
     }
 
