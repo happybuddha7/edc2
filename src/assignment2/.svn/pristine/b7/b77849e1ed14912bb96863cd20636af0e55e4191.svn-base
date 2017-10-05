@@ -201,10 +201,10 @@ public class MapImpl implements Map{
         roadString=roadString+"ROAD "+road1.toString()+"\n";
     }
     if(this.startPlace!=null){
-        startString="START "+this.getEndPlace().getName()+"\n";
+        startString="START "+this.getEndPlace().getName()+"/n";
     }
     if(this.endPlace!=null){
-        endString="END "+this.getEndPlace().getName()+"\n";
+        endString="END "+this.getEndPlace().getName()+"/n";
     }
         mapString=mapString+placesString+roadString+startString+endString;
     return mapString;
@@ -290,16 +290,17 @@ public class MapImpl implements Map{
         public int roadLength;
 
         public RoadImpl(Place from, Place to, String roadName, int roadLength){
-            this.places=new HashSet<Place>();
-            this.places.add(from);
-            this.firstPlace=from;
-            this.places.add(to);
-            this.secondPlace=to;
+            places.add(from);
+            firstPlace=from;
+            places.add(to);
+            secondPlace=to;
             this.roadNameString=roadName;
             this.roadLength=roadLength;
+
         }
         @Override
         public void addListener(RoadListener rl) {
+
         }
         @Override
         public void deleteListener(RoadListener rl) {
@@ -347,7 +348,7 @@ public class MapImpl implements Map{
         //"firstPlace(roadName:length)secondPlace"
         @Override
         public String toString(){
-            return this.firstPlace.getName()+"("+this.roadName()+":"+this.roadLength+")"+this.secondPlace().getName();}
+            return "firstplace("+this.roadName()+":"+this.roadLength+")"+this.secondPlace();}
     }
 
 

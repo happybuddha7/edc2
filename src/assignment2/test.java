@@ -21,8 +21,10 @@ public class test
 
     public static void main(String[] args) throws IOException {
     Map map1 = new MapImpl();
-    map1.newPlace("test place", 100 , 100 );
-    map1.newPlace("Another test", 200 , 600 );
+    Place here= map1.newPlace("test place", 100 , 100 );
+    Place there = map1.newPlace("Another test", 200 , 600 );
+    map1.newRoad(here, there, "route 66", 666);
+
     for (Place place : map1.getPlaces()){
         System.out.println(place.getName()+ " , "+place.getX()+" , "+place.getY());
     }
