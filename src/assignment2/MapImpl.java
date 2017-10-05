@@ -10,6 +10,18 @@ public class MapImpl implements Map{
     private Place endPlace;
     public int tripDistance=0;
 
+    public boolean validRoadName(String name){
+        boolean isValid=false;
+        if (name==""){
+            isValid=true;
+            return isValid;}
+        char charCheck =name.charAt(0);
+        if (Character.isLetter(charCheck)){
+            isValid=true;
+        }
+        return isValid;
+    }
+
     public MapImpl(){
         this.Places=new HashSet<Place>();
         this.Roads=new HashSet<Road>();
@@ -24,9 +36,17 @@ public class MapImpl implements Map{
     @Override
     public void deleteListener(MapListener ml) {
     }
+//Create a new Place and add it to this map
+    //Return the new place
+    //Throws IllegalArgumentException if:
+    //  the name is not valid or is the same as that
+    //  of an existing place
+    //Note: A valid placeName begins with a letter, and is
+    //followed by optional letters, digits, or underscore characters
 
     @Override
     public Place newPlace(String placeName, int xPos, int yPos) throws IllegalArgumentException {
+
         char charCheck =placeName.charAt(0);
         if (!Character.isLetter(charCheck)){
             throw new IllegalArgumentException();
@@ -36,11 +56,19 @@ public class MapImpl implements Map{
         return place;
     }
 
+    //Remove a place from the map
+    //If the place does not exist, returns without error
     @Override
     public void deletePlace(Place s) {
-    this.Places.remove(s);
+        if (s==null){
+        return;
+        }
+        if( Places.contains(s)){
+            this.Places.remove(s);
+        }else{return;}
     }
-
+    //Find and return the Place with the given name
+    //If no place exists with given name, return NULL
     @Override
     public Place findPlace(String placeName) {
         for (Place place : Places){
@@ -50,24 +78,53 @@ public class MapImpl implements Map{
         }
         return null;
     }
+    //no special rules
     @Override
     public Set<Place> getPlaces() {
         return this.Places;
     }
+    //Create a new Road and add it to this map
+    //Returns the new road.
+    //Throws IllegalArgumentException if:
+    //  the firstPlace or secondPlace does not exist or
+    //  the roadName is invalid or
+    //  the length is negative
+    //Note: A valid roadName is either the empty string, or starts
+    //with a letter and is followed by optional letters and digits
     @Override
     public Road newRoad(Place from, Place to, String roadName, int length) throws IllegalArgumentException {
+        if (!Places.contains(from)||!Places.contains(to)){
+            throw new IllegalArgumentException();
+        }
+        if(!validRoadName(roadName)){
+            throw new IllegalArgumentException();
+        }
+        if(length<0){
+            throw new IllegalArgumentException();
+        }
         RoadImpl road= new RoadImpl(from,to,roadName,length);
         Roads.add(road);
         return road;
     }
+    //Remove a road r from the map
+    //If the road does not exist, returns without error
     @Override
     public void deleteRoad(Road r) {
-    this.Roads.remove(r);
+        if(!Roads.contains(r)){
+        return;
+        }
+        this.Roads.remove(r);
     }
+
+    //no special rules
     @Override
     public Set<Road> getRoads() {
         return this.Roads;
     }
+
+    //Set the place p as the starting place
+    //If p==null, unsets the starting place
+    //Throws IllegalArgumentException if the place p is not in the map
     @Override
     public void setStartPlace(Place p) throws IllegalArgumentException {
         if (p==null){this.startPlace=null;}
@@ -82,6 +139,10 @@ public class MapImpl implements Map{
     public Place getStartPlace() {
         return this.startPlace;
     }
+
+    //Set the place p as the ending place
+    //If p==null, unsets the ending place
+    //Throws IllegalArgumentException if the place p is not in the map
     @Override
     public void setEndPlace(Place p) throws IllegalArgumentException {
         if (p==null){this.startPlace=null;}
@@ -89,16 +150,64 @@ public class MapImpl implements Map{
             this.endPlace=p;
         }
         else {
-            throw new IllegalArgumentException("bad end place");
+            throw new IllegalArgumentException();
         }
     }
+
     @Override
     public Place getEndPlace() {
         return this.endPlace;
     }
+
+    //Causes the map to compute the shortest trip between the
+    //"start" and "end" places
+    //For each road on the shortest route, sets the "isChosen" property
+    //to "true".
+    //Returns the total distance of the trip.
+    //Returns -1, if there is no route from start to end
     @Override
     public int getTripDistance() {
+        int startX=0, startY=0;
+        int endX=0, endY=0;
+        startX=this.getStartPlace().getX();
+        startY=this.getStartPlace().getY();
+        endX=this.getEndPlace().getX();
+        endY=this.getEndPlace().getY();
+
+
+
         return this.tripDistance;
+    }
+    //Return a string describing this map
+    //Returns a string that contains (in this order):
+    //for each place in the map, a line (terminated by \n)
+    //  PLACE followed the toString result for that place
+    //for each road in the map, a line (terminated by \n)
+    //  ROAD followed the toString result for that road
+    //if a starting place has been defined, a line containing
+    //  START followed the name of the starting-place (terminated by \n)
+    //if an ending place has been defined, a line containing
+    //  END followed the name of the ending-place (terminated by \n)
+    public String toString(){
+    String mapString="";
+    String placesString = "";
+    String roadString="";
+    String startString="";
+    String endString="";
+    for (Place place1: Places){
+        placesString=placesString+"PLACE "+place1.toString()+"\n";
+    }
+    for (Road road1: Roads){
+        roadString=roadString+"ROAD "+road1.toString()+"\n";
+    }
+    if(this.startPlace!=null){
+        startString="START "+this.getEndPlace().getName()+"/n";
+    }
+    if(this.endPlace!=null){
+        endString="END "+this.getEndPlace().getName()+"/n";
+    }
+        mapString=mapString+placesString+roadString+startString+endString;
+    return mapString;
     }
 
 
