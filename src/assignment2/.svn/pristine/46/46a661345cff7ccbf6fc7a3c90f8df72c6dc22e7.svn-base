@@ -1,4 +1,3 @@
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -70,12 +69,12 @@ public class MapImpl implements Map{
     }
     @Override
     public void setStartPlace(Place p) throws IllegalArgumentException {
-        if (p==null){this.startPlace=null;}
-        else if (Places.contains(p)){
+        if (Places.contains(p)){
             this.startPlace=p;
         }
         else {
-            throw new IllegalArgumentException("bad start place");
+            this.newPlace(p.getName(),p.getX(),p.getY());
+            this.startPlace=p;
         }
     }
     @Override
@@ -84,12 +83,12 @@ public class MapImpl implements Map{
     }
     @Override
     public void setEndPlace(Place p) throws IllegalArgumentException {
-        if (p==null){this.startPlace=null;}
         if (Places.contains(p)){
             this.endPlace=p;
         }
         else {
-            throw new IllegalArgumentException("bad end place");
+            this.newPlace(p.getName(),p.getX(),p.getY());
+            this.endPlace=p;
         }
     }
     @Override
@@ -107,17 +106,13 @@ public class MapImpl implements Map{
         public String name;
         public int x;
         public int y;
-        private boolean startPlace;
-        private boolean endPlace;
-
 
         public PlaceImpl(String name, int x, int y){
             this.toRoads= new HashSet<Road>();
+
             this.name=name;
             this.x=x;
             this.y=y;
-            this.startPlace=false;
-            this.endPlace=false;
         }
         @Override
         public void addListener(PlaceListener pl) {
@@ -159,11 +154,11 @@ public class MapImpl implements Map{
         }
         @Override
         public boolean isStartPlace() {
-            return this.startPlace;
+            return false;
         }
         @Override
         public boolean isEndPlace() {
-            return this.endPlace;
+            return false;
         }
         @Override
         public String toString(){
@@ -174,20 +169,16 @@ public class MapImpl implements Map{
 
 
     public class RoadImpl implements Road {
-        public Set<Place> places;
-        public Place firstPlace;
-        public Place secondPlace;
+        public Place from;
+        public Place to;
         public String roadNameString;
         public int roadLength;
 
         public RoadImpl(Place from, Place to, String roadName, int roadLength){
-            places.add(from);
-            firstPlace=from;
-            places.add(to);
-            secondPlace=to;
+            this.from=from;
+            this.to=to;
             this.roadNameString=roadName;
             this.roadLength=roadLength;
-
         }
         @Override
         public void addListener(RoadListener rl) {
@@ -196,31 +187,13 @@ public class MapImpl implements Map{
         @Override
         public void deleteListener(RoadListener rl) {
         }
-        public void sortPlaces(){
-            for(int i = 0; i<this.firstPlace.getName().length(); i++){
-                if (this.firstPlace.getName().charAt(i)<this.secondPlace.getName().charAt(i)){
-                    //already alphabetical ahead
-                    break;
-                }else if (this.firstPlace.getName().charAt(i)>this.secondPlace.getName().charAt(i)){
-                    //firstplace is alphabetically second, swap position with second place
-                    Place tempPlace = this.firstPlace;
-                    this.firstPlace=this.secondPlace;
-                    this.secondPlace=tempPlace;
-                    break;
-                } else if (this.firstPlace.getName().charAt(i)==this.secondPlace.getName().charAt(i)){
-                    //i++ called by loop
-                }
-            }
-        }
         @Override
         public Place firstPlace() {
-            this.sortPlaces();
-            return this.firstPlace;
+            return this.from;
         }
         @Override
         public Place secondPlace() {
-            this.sortPlaces();
-            return this.secondPlace;
+            return this.to;
         }
         @Override
         public boolean isChosen() {
@@ -232,14 +205,14 @@ public class MapImpl implements Map{
         }
         @Override
         public int length() {
+
             return this.roadLength;
         }
         //Return a string containing information about this road
         //in the form (without quotes, of course!):
         //"firstPlace(roadName:length)secondPlace"
         @Override
-        public String toString(){
-            return "firstplace("+this.roadName()+":"+this.roadLength+")"+this.secondPlace();}
+        public String toString(){return "firstplace("+this.roadName()+":"+this.roadLength+")"+this.secondPlace();}
     }
 
 

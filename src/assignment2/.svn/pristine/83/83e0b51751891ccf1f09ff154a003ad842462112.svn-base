@@ -8,10 +8,7 @@ public interface Map
     public void addListener(MapListener ml);
     //Delete the MapListener ml from this map.
     public void deleteListener(MapListener ml);
-<<<<<<< HEAD
-=======
 
->>>>>>> master
     //Create a new Place and add it to this map
     //Return the new place
     //Throws IllegalArgumentException if:
@@ -21,10 +18,7 @@ public interface Map
     //followed by optional letters, digits, or underscore characters
     public Place newPlace(String placeName, int xPos, int yPos)
       throws IllegalArgumentException;
-<<<<<<< HEAD
-=======
 
->>>>>>> master
     //Remove a place from the map
     //If the place does not exist, returns without error
     public void deletePlace(Place s);

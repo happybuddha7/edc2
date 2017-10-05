@@ -9,7 +9,7 @@ public class MapReaderWriter implements MapIo {
 
     @Override
     public void read(Reader r, Map m) throws IOException, MapFormatException {
-    
+
     }
 
     @Override
@@ -17,7 +17,7 @@ public class MapReaderWriter implements MapIo {
         for (Place place: m.getPlaces()){
         w.write("place "+place.getName(), place.getX(), place.getY());
          }
-        w.write("/n");
+        w.write("");
         for (Road road: m.getRoads()){
             w.write("road "+road.firstPlace()+ " "+road.roadName()+" "+ road.length()+" "+ road.secondPlace());
                 //road firstPlace roadName length secondPlace
