@@ -1,0 +1,53 @@
+import java.util.Set;
+
+public class PlaceImpl implements Place{
+    @Override
+    public void addListener(PlaceListener pl) {
+
+    }
+
+    @Override
+    public void deleteListener(PlaceListener pl) {
+
+    }
+
+    @Override
+    public Set<Road> toRoads() {
+        return null;
+    }
+
+    @Override
+    public Road roadTo(Place dest) {
+        return null;
+    }
+
+    @Override
+    public void moveBy(int dx, int dy) {
+
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public int getX() {
+        return 0;
+    }
+
+    @Override
+    public int getY() {
+        return 0;
+    }
+
+    @Override
+    public boolean isStartPlace() {
+        return false;
+    }
+
+    @Override
+    public boolean isEndPlace() {
+        return false;
+    }
+}

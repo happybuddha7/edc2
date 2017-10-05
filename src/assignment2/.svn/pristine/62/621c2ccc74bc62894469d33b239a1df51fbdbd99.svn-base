@@ -1,0 +1,36 @@
+public class RoadImpl implements Road {
+    @Override
+    public void addListener(RoadListener rl) {
+
+    }
+
+    @Override
+    public void deleteListener(RoadListener rl) {
+
+    }
+
+    @Override
+    public Place firstPlace() {
+        return null;
+    }
+
+    @Override
+    public Place secondPlace() {
+        return null;
+    }
+
+    @Override
+    public boolean isChosen() {
+        return false;
+    }
+
+    @Override
+    public String roadName() {
+        return null;
+    }
+
+    @Override
+    public int length() {
+        return 0;
+    }
+}

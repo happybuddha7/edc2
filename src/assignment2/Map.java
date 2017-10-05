@@ -6,12 +6,8 @@ public interface Map
     //Add the MapListener ml to this map.
     //Note: A map can have multiple listeners
     public void addListener(MapListener ml);
-
-
     //Delete the MapListener ml from this map.
     public void deleteListener(MapListener ml);
-
-
     //Create a new Place and add it to this map
     //Return the new place
     //Throws IllegalArgumentException if:
@@ -21,18 +17,12 @@ public interface Map
     //followed by optional letters, digits, or underscore characters
     public Place newPlace(String placeName, int xPos, int yPos)
       throws IllegalArgumentException;
-
-
     //Remove a place from the map
     //If the place does not exist, returns without error
     public void deletePlace(Place s);
-
-
     //Find and return the Place with the given name
     //If no place exists with given name, return NULL
     public Place findPlace(String placeName);
-
-
     //Return a set containing all the places in this map
     public Set<Place> getPlaces();
     
