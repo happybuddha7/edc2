@@ -40,7 +40,5 @@ public class MapReaderWriter implements MapIo {
         if (m.getEndPlace()!=null){
             w.write("start"+m.getEndPlace().getName());
         }
-    w.close();
-
     }
 }
