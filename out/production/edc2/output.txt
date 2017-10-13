@@ -1,4 +1,4 @@
-place Another test 200 600
-place test place 100 100
-road Another test(200,600) route 66 666 test place(100,100)
+place AnotherTest 200 600
+place testPlace 100 100
+road AnotherTest route66 666 testPlace
 

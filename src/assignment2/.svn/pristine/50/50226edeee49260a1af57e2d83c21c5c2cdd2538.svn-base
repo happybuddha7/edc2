@@ -16,7 +16,7 @@ public class MapImpl implements Map{
             isValid=true;
             return isValid;}
         char charCheck =name.charAt(0);
-        if (charCheck == '-'|| Character.isLetter(charCheck)){
+        if (Character.isLetter(charCheck)){
             isValid=true;
         }
         return isValid;
@@ -97,7 +97,6 @@ public class MapImpl implements Map{
             throw new IllegalArgumentException();
         }
         if(!validRoadName(roadName)){
-            System.out.println(roadName);
             throw new IllegalArgumentException();
         }
         if(length<0){

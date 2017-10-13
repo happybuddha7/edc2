@@ -90,7 +90,7 @@ public class MapReaderWriter implements MapIo {
         StringBuffer mapString;
         String word;
         while(line!=null) {
-            line = br.readLine();
+            line = ((BufferedReader) r).readLine();
 
             if(line!=null){scanLine(line, m);}
 

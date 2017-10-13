@@ -85,12 +85,12 @@ public class MapReaderWriter implements MapIo {
     //Reader r, and transfers it to Map, m.
     @Override
     public void read(Reader r, Map m) throws IOException, MapFormatException {
-        BufferedReader br = new BufferedReader(r);
+        BufferedReader br = (BufferedReader) r;
         String line="";
         StringBuffer mapString;
         String word;
         while(line!=null) {
-            line = br.readLine();
+            line = ((BufferedReader) r).readLine();
 
             if(line!=null){scanLine(line, m);}
 

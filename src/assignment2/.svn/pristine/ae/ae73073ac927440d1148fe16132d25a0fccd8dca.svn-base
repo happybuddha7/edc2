@@ -16,7 +16,7 @@ public class MapImpl implements Map{
             isValid=true;
             return isValid;}
         char charCheck =name.charAt(0);
-        if (charCheck == '-'|| Character.isLetter(charCheck)){
+        if (Character.isLetter(charCheck)){
             isValid=true;
         }
         return isValid;
@@ -97,7 +97,6 @@ public class MapImpl implements Map{
             throw new IllegalArgumentException();
         }
         if(!validRoadName(roadName)){
-            System.out.println(roadName);
             throw new IllegalArgumentException();
         }
         if(length<0){
@@ -121,11 +120,13 @@ public class MapImpl implements Map{
         }
         this.Roads.remove(r);
     }
+
     //no special rules
     @Override
     public Set<Road> getRoads() {
         return this.Roads;
     }
+
     //Set the place p as the starting place
     //If p==null, unsets the starting place
     //Throws IllegalArgumentException if the place p is not in the map
@@ -177,6 +178,9 @@ public class MapImpl implements Map{
         startY=this.getStartPlace().getY();
         endX=this.getEndPlace().getX();
         endY=this.getEndPlace().getY();
+
+
+
         return this.tripDistance;
     }
     //Return a string describing this map
@@ -219,6 +223,7 @@ public class MapImpl implements Map{
         public int y;
         private boolean startPlace;
         private boolean endPlace;
+
 
         public PlaceImpl(String name, int x, int y){
             this.toRoads= new HashSet<Road>();
@@ -282,12 +287,15 @@ public class MapImpl implements Map{
             return string;
         }
     }
+
+
     public class RoadImpl implements Road {
         public Set<Place> places;
         public Place firstPlace;
         public Place secondPlace;
         public String roadNameString;
         public int roadLength;
+
         public RoadImpl(Place from, Place to, String roadName, int roadLength){
             this.places=new HashSet<Place>();
             this.places.add(from);
@@ -296,7 +304,6 @@ public class MapImpl implements Map{
             this.secondPlace=to;
             this.roadNameString=roadName;
             this.roadLength=roadLength;
-            this.sortPlaces();
         }
         @Override
         public void addListener(RoadListener rl) {
