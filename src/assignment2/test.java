@@ -36,25 +36,30 @@ public class test {
         for (Road road : map1.getRoads()) {
             System.out.println(road.toString());
         }
-        System.out.println("Test Map:....");
+        System.out.println("Test Writer:....");
         System.out.print(map1.toString());
         Writer writer = null;
-        writer = new BufferedWriter(new FileWriter("C:\\Users\\Tofu\\Documents\\EDC\\edc2\\src\\assignment2\\output.txt"));
+        writer = new BufferedWriter(new FileWriter("output.txt"));
         MapReaderWriter mapReaderWriter = new MapReaderWriter();
         mapReaderWriter.write(writer, map1);
-        System.out.println("Test reader:.....");
         writer.close();
 
+        System.out.println("Test map reader:.....");
         Reader reader = null;
-        reader = new BufferedReader((new FileReader("C:\\Users\\Tofu\\Documents\\EDC\\edc2\\src\\assignment2\\exampleMap.map")));
+        reader = new BufferedReader((new FileReader("src/assignment2/exampleMap.map")));
         Map map2 = new MapImpl();
         try {
             mapReaderWriter.read(reader, map2);
         } catch (MapFormatException e) {
             e.printStackTrace();
         }
-        System.out.println("Test Map for reader:.....");
+        System.out.println("output from reader:.....");
         System.out.print(map2.toString());
+        reader.close();
+        System.out.println("Test writer:.....");
+        Writer writer2=null;
+        writer2 = new BufferedWriter(new FileWriter("src/assignment2/output2.txt"));
+        mapReaderWriter.write(writer2,map2);
         /*for (Place place : map2.getPlaces()) {
             System.out.println(place.toString());
             System.out.println("Test Roads in " + place.getName());
@@ -62,6 +67,7 @@ public class test {
                 System.out.println(road.toString());
             }
         }*/
-        reader.close();
+        writer2.close();
+
     }
 }

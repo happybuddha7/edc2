@@ -4,14 +4,10 @@ import java.util.Scanner;
 
 public class MapReaderWriter implements MapIo {
     private Map map;
-
-
     public MapReaderWriter() {
     }
-
     //This class handles reading and writing map representations as
     //described in the practical specification
-
     public void scanLine (String line, Map m)throws MapFormatException{
         Scanner scanner = new Scanner(line);
         if (scanner.hasNext()){
@@ -71,7 +67,6 @@ public class MapReaderWriter implements MapIo {
                         break;
                     }
                 }
-
                 m.setEndPlace(endPlace);
             }
         }
@@ -80,7 +75,6 @@ public class MapReaderWriter implements MapIo {
         }
         scanner.close();
     }
-
     //Read the description of a map from the
     //Reader r, and transfers it to Map, m.
     @Override
@@ -91,32 +85,30 @@ public class MapReaderWriter implements MapIo {
         String word;
         while(line!=null) {
             line = br.readLine();
-
             if(line!=null){scanLine(line, m);}
-
         }
     }
-
     //Write a representation of the Map, m, to the Writer w.
     @Override
     public void write(Writer w, Map m) throws IOException {
         for (Place place: m.getPlaces()){
-        w.write("place "+place.getName()+" "+ place.getX()+ " "+place.getY());
+            w.write("place "+place.getName()+" "+ place.getX()+ " "+place.getY());
             w.write(System.getProperty( "line.separator" ));
+            System.out.println("writing place:"+place.getName()+" "+ place.getX()+ " "+place.getY());
          }
+        w.write(System.getProperty( "line.separator" ));
         for (Road road: m.getRoads()){
             w.write("road "+road.firstPlace().getName()+ " "+road.roadName()+" "+ road.length()+" "+ road.secondPlace().getName());
             w.write(System.getProperty( "line.separator" ));
             //road firstPlace roadName length secondPlace
         }
-
         if (m.getStartPlace()!=null){
             w.write("start"+m.getStartPlace().getName());
         }
         w.write(System.getProperty( "line.separator" ));
         if (m.getEndPlace()!=null){
-            w.write("start"+m.getEndPlace().getName());
+            w.write("end"+m.getEndPlace().getName());
         }
-
+        w.write(System.getProperty( "line.separator" ));
     }
 }
