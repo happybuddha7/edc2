@@ -51,4 +51,4 @@ road Geelong Princes1 74 Melbourne
 road Avoca Sunrasia 71 Ballarat
 road Bordertown Western8 157 Horsham
 startMelbourne
-startAdelaide
+endAdelaide

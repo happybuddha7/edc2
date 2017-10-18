@@ -1,6 +1,4 @@
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 
 public class MapImpl implements Map{
@@ -8,6 +6,8 @@ public class MapImpl implements Map{
     private Set<Road> Roads;
     private Place startPlace;
     private Place endPlace;
+    private List<MapListener> listenerList;
+
     public int tripDistance=0;
 
     public boolean validRoadName(String name){
@@ -21,7 +21,6 @@ public class MapImpl implements Map{
         }
         return isValid;
     }
-
     public MapImpl(){
         this.Places=new HashSet<Place>();
         this.Roads=new HashSet<Road>();
@@ -31,10 +30,15 @@ public class MapImpl implements Map{
     }
     @Override
     public void addListener(MapListener ml) {
+        listenerList.add(ml);
     }
-
     @Override
-    public void deleteListener(MapListener ml) {
+    public void deleteListener(MapListener ml)
+    {
+        if(ml!=null&&listenerList.contains(ml)){
+            listenerList.remove(ml);
+        }
+
     }
 //Create a new Place and add it to this map
     //Return the new place
@@ -43,7 +47,6 @@ public class MapImpl implements Map{
     //  of an existing place
     //Note: A valid placeName begins with a letter, and is
     //followed by optional letters, digits, or underscore characters
-
     @Override
     public Place newPlace(String placeName, int xPos, int yPos) throws IllegalArgumentException {
 
@@ -55,7 +58,6 @@ public class MapImpl implements Map{
         this.Places.add(place);
         return place;
     }
-
     //Remove a place from the map
     //If the place does not exist, returns without error
     @Override
@@ -211,6 +213,23 @@ public class MapImpl implements Map{
     return mapString;
     }
 
+    public class mapListenerImpl implements MapListener{
+        @Override
+        public void placesChanged()
+        {
+
+        }
+
+        @Override
+        public void roadsChanged() {
+
+        }
+
+        @Override
+        public void otherChanged() {
+
+        }
+    }
 
     public class PlaceImpl implements Place {
         public Set<Road> toRoads;
@@ -219,6 +238,7 @@ public class MapImpl implements Map{
         public int y;
         private boolean startPlace;
         private boolean endPlace;
+        private List<PlaceListener> placeListenerList;
 
         public PlaceImpl(String name, int x, int y){
             this.toRoads= new HashSet<Road>();
@@ -230,9 +250,12 @@ public class MapImpl implements Map{
         }
         @Override
         public void addListener(PlaceListener pl) {
+            placeListenerList.add(pl);
         }
         @Override
         public void deleteListener(PlaceListener pl) {
+            if(pl!=null&&placeListenerList.contains(pl))
+            placeListenerList.remove(pl);
         }
         @Override
         public Set<Road> toRoads() {
@@ -281,6 +304,13 @@ public class MapImpl implements Map{
             String string= this.name+"("+this.getX()+","+this.getY()+")";
             return string;
         }
+        public class placeListenerImpl implements PlaceListener{
+
+            @Override
+            public void placeChanged() {
+
+            }
+        }
     }
     public class RoadImpl implements Road {
         public Set<Place> places;
@@ -288,6 +318,7 @@ public class MapImpl implements Map{
         public Place secondPlace;
         public String roadNameString;
         public int roadLength;
+        private List<RoadListener> roadListenerList;
         public RoadImpl(Place from, Place to, String roadName, int roadLength){
             this.places=new HashSet<Place>();
             this.places.add(from);
@@ -298,11 +329,18 @@ public class MapImpl implements Map{
             this.roadLength=roadLength;
             this.sortPlaces();
         }
+
+
         @Override
         public void addListener(RoadListener rl) {
+            roadListenerList.add(rl);
+
         }
         @Override
         public void deleteListener(RoadListener rl) {
+        if(rl!=null&roadListenerList.contains(rl)){
+            roadListenerList.remove(rl);
+        }
         }
         public void sortPlaces(){
             for(int i = 0; i<this.firstPlace.getName().length(); i++){
@@ -348,5 +386,13 @@ public class MapImpl implements Map{
         @Override
         public String toString(){
             return this.firstPlace.getName()+"("+this.roadName()+":"+this.roadLength+")"+this.secondPlace().getName();}
+
+        public class roadListenerImpl implements RoadListener{
+
+            @Override
+            public void roadChanged() {
+
+            }
+        }
     }
 }

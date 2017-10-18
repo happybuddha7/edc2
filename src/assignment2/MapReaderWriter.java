@@ -15,6 +15,9 @@ public class MapReaderWriter implements MapIo {
             String type = scanner.next();
            // System.out.println("Type: "+type);
             //assumes the line has a certain structure
+            while(type.charAt(0)=='#'){
+                type=scanner.next();
+            }
             if (type.equals("place")){
                 String place1 = scanner.next();
              //   System.out.println("place1: "+place1);
@@ -94,7 +97,7 @@ public class MapReaderWriter implements MapIo {
         for (Place place: m.getPlaces()){
             w.write("place "+place.getName()+" "+ place.getX()+ " "+place.getY());
             w.write(System.getProperty( "line.separator" ));
-            System.out.println("writing place:"+place.getName()+" "+ place.getX()+ " "+place.getY());
+           // System.out.println("writing place:"+place.getName()+" "+ place.getX()+ " "+place.getY());
          }
         w.write(System.getProperty( "line.separator" ));
         for (Road road: m.getRoads()){
@@ -103,11 +106,11 @@ public class MapReaderWriter implements MapIo {
             //road firstPlace roadName length secondPlace
         }
         if (m.getStartPlace()!=null){
-            w.write("start"+m.getStartPlace().getName());
+            w.write("start "+m.getStartPlace().getName());
         }
         w.write(System.getProperty( "line.separator" ));
         if (m.getEndPlace()!=null){
-            w.write("end"+m.getEndPlace().getName());
+            w.write("end "+m.getEndPlace().getName());
         }
         w.write(System.getProperty( "line.separator" ));
     }

@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="151eb6c6-b347-46e3-a3ac-eb43d60895c9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/edc2/MapReaderWriter.class" afterPath="$PROJECT_DIR$/out/production/edc2/MapReaderWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/edc2/test.class" afterPath="$PROJECT_DIR$/out/production/edc2/test.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/edc2/assignment2/exampleMap.map" afterPath="$PROJECT_DIR$/out/production/edc2/assignment2/exampleMap.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/edc2/assignment2/output2.txt" afterPath="$PROJECT_DIR$/out/production/edc2/assignment2/output2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/edc2/exampleMap.map" afterPath="$PROJECT_DIR$/out/production/edc2/exampleMap.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/edc2/output2.txt" afterPath="$PROJECT_DIR$/out/production/edc2/output2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment2/MapImpl.java" afterPath="$PROJECT_DIR$/src/assignment2/MapImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment2/MapReaderWriter.java" afterPath="$PROJECT_DIR$/src/assignment2/MapReaderWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment2/test.java" afterPath="$PROJECT_DIR$/src/assignment2/test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment2/exampleMap.map" afterPath="$PROJECT_DIR$/src/assignment2/exampleMap.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment2/output2.txt" afterPath="$PROJECT_DIR$/src/assignment2/output2.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,44 +22,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MapReaderWriter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/assignment2/MapReaderWriter.java">
+      <file leaf-file-name="MapListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment2/MapListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment2/Map.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlaceListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment2/PlaceListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoadListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment2/RoadListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/assignment2/MapImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapIo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment2/MapIo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment2/test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="-612">
+              <caret line="340" column="40" lean-forward="true" selection-start-line="340" selection-start-column="40" selection-end-line="340" selection-end-column="40" />
+              <folding>
+                <element signature="method#validRoadName#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#MapImpl#0;class#MapImpl#0" expanded="false" />
+                <element signature="e#834#835#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="n#!!doc;n#newPlace#0;n#MapImpl#0" expanded="false" />
+                <element signature="method#newPlace#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#deletePlace#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#findPlace#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#newRoad#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#deleteRoad#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#setStartPlace#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#setEndPlace#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#getTripDistance#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#toString#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#PlaceImpl#0;class#PlaceImpl#0;class#MapImpl#0" expanded="false" />
+                <element signature="e#7708#7709#0" expanded="true" />
+                <element signature="e#7757#7758#0" expanded="true" />
+                <element signature="method#roadTo#0;class#PlaceImpl#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#moveBy#0;class#PlaceImpl#0;class#MapImpl#0" expanded="false" />
+                <element signature="method#toString#0;class#PlaceImpl#0;class#MapImpl#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,6 +108,7 @@
       <find>PlaceImpl</find>
       <find>newR</find>
       <find>System.out</find>
+      <find>liste</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,9 +134,9 @@
         <option value="$PROJECT_DIR$/src/assignment2/Map.java" />
         <option value="$PROJECT_DIR$/src/assignment2/MapFormatException.java" />
         <option value="$PROJECT_DIR$/src/assignment2/input.txt" />
-        <option value="$PROJECT_DIR$/src/assignment2/MapImpl.java" />
         <option value="$PROJECT_DIR$/src/assignment2/test.java" />
         <option value="$PROJECT_DIR$/src/assignment2/MapReaderWriter.java" />
+        <option value="$PROJECT_DIR$/src/assignment2/MapImpl.java" />
       </list>
     </option>
   </component>
@@ -112,8 +147,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="568" />
+    <option name="y" value="-17" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -302,12 +337,12 @@
       <workItem from="1507188736320" duration="1521000" />
       <workItem from="1507633708331" duration="19334000" />
       <workItem from="1508211185316" duration="95000" />
-      <workItem from="1508291792273" duration="2948000" />
+      <workItem from="1508291792273" duration="6009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47961000" />
+    <option name="totallyTimeSpent" value="51022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -322,7 +357,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.54375" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33224222" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33224222" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -350,14 +385,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MapIo.java" />
-    <entry file="file://$PROJECT_DIR$/MapImpl.java" />
-    <entry file="file://$PROJECT_DIR$/Place.java" />
     <entry file="file://$PROJECT_DIR$/PlaceImpl.java" />
     <entry file="file://$PROJECT_DIR$/RoadListener.java" />
     <entry file="file://$PROJECT_DIR$/Map.java" />
@@ -387,14 +419,6 @@
     <entry file="file://$PROJECT_DIR$/src/MapIo.java" />
     <entry file="file://$PROJECT_DIR$/src/assignment2/PlaceImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/assignment2/RoadImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/assignment2/RoadListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment2/RoadListenerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -431,14 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment2/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="54" column="27" lean-forward="false" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -488,7 +504,7 @@
         <state relative-caret-position="126">
           <caret line="701" column="0" lean-forward="false" selection-start-line="701" selection-start-column="0" selection-end-line="701" selection-end-column="0" />
           <folding>
-            <element signature="e#26973#26974#0" expanded="true" />
+            <element signature="e#26973#26974#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -508,14 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment2/MapImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment2/test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -526,10 +534,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment2/MapReaderWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+        <state relative-caret-position="-1408">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment2/MapListenerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment2/PlaceListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment2/RoadListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment2/MapListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment2/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment2/MapImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="340" column="40" lean-forward="true" selection-start-line="340" selection-start-column="40" selection-end-line="340" selection-end-column="40" />
+          <folding>
+            <element signature="method#validRoadName#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#MapImpl#0;class#MapImpl#0" expanded="false" />
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="n#!!doc;n#newPlace#0;n#MapImpl#0" expanded="false" />
+            <element signature="method#newPlace#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#deletePlace#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#findPlace#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#newRoad#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#deleteRoad#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#setStartPlace#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#setEndPlace#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#getTripDistance#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#toString#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#PlaceImpl#0;class#PlaceImpl#0;class#MapImpl#0" expanded="false" />
+            <element signature="e#7708#7709#0" expanded="true" />
+            <element signature="e#7757#7758#0" expanded="true" />
+            <element signature="method#roadTo#0;class#PlaceImpl#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#moveBy#0;class#PlaceImpl#0;class#MapImpl#0" expanded="false" />
+            <element signature="method#toString#0;class#PlaceImpl#0;class#MapImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>

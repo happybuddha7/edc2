@@ -50,5 +50,5 @@ road Portland Princes1 100 Warnambool
 road Geelong Princes1 74 Melbourne
 road Avoca Sunrasia 71 Ballarat
 road Bordertown Western8 157 Horsham
-startMelbourne
-startAdelaide
+start Melbourne
+end Adelaide
