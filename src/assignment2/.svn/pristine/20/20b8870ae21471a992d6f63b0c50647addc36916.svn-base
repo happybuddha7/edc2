@@ -217,14 +217,20 @@ public class MapImpl implements Map{
         @Override
         public void placesChanged()
         {
+
         }
+
         @Override
         public void roadsChanged() {
+
         }
+
         @Override
         public void otherChanged() {
+
         }
     }
+
     public class PlaceImpl implements Place {
         public Set<Road> toRoads;
         public String name;
